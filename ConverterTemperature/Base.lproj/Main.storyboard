@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otg-gZ-jES">
+    <device id="retina4_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--C F Converter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConverterTemperature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-Ld-vCx">
+                                <rect key="frame" x="0.0" y="-56" width="568" height="410"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i02-sW-G8F">
+                                <rect key="frame" x="248" y="62" width="69" height="36"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.max.fill" translatesAutoresizingMaskIntoConstraints="NO" id="3XG-JI-EWj">
+                                <rect key="frame" x="42" y="145" width="484" height="31"/>
+                                <color key="minimumTrackTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="maximumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T29-oQ-SZ0">
+                                <rect key="frame" x="249" y="225" width="67" height="35"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zyR-hq-TdS">
+                                <rect key="frame" x="18" y="66" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-go-V5y">
+                                <rect key="frame" x="353" y="45" width="195" height="30"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T29-oQ-SZ0" firstAttribute="top" secondItem="3XG-JI-EWj" secondAttribute="bottom" constant="50" id="1JB-80-GBv"/>
+                            <constraint firstItem="i02-sW-G8F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="2fx-jN-Bly">
+                                <variation key="heightClass=compact-widthClass=compact" constant="244"/>
+                            </constraint>
+                            <constraint firstItem="vg5-go-V5y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BYh-51-3PS"/>
+                            <constraint firstItem="9Tm-Ld-vCx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="ETX-3w-YE0"/>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="top" secondItem="i02-sW-G8F" secondAttribute="bottom" constant="50" id="PGH-Pm-3g3">
+                                <variation key="heightClass=compact-widthClass=compact" constant="47"/>
+                            </constraint>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sb5-I7-0zB"/>
+                            <constraint firstItem="9Tm-Ld-vCx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SeN-Uw-fVe"/>
+                            <constraint firstItem="vg5-go-V5y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tua-PR-LCN"/>
+                            <constraint firstItem="T29-oQ-SZ0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1.5" id="WAC-Gu-VUQ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-2.5"/>
+                            </constraint>
+                            <constraint firstItem="T29-oQ-SZ0" firstAttribute="centerX" secondItem="i02-sW-G8F" secondAttribute="centerX" id="Zgd-W0-Ele"/>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="cxm-md-Plh"/>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBt-UD-GI0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9Tm-Ld-vCx" secondAttribute="top" constant="88" id="f6B-lr-wpJ"/>
+                            <constraint firstItem="T29-oQ-SZ0" firstAttribute="top" secondItem="3XG-JI-EWj" secondAttribute="bottom" constant="50" id="jxN-7b-8YH"/>
+                            <constraint firstItem="vg5-go-V5y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="lUg-fU-w8V"/>
+                            <constraint firstItem="vg5-go-V5y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="lXP-NL-32M"/>
+                            <constraint firstItem="T29-oQ-SZ0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="249" id="mSb-vV-AdL"/>
+                            <constraint firstItem="9Tm-Ld-vCx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vKz-wh-7gv"/>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="top" secondItem="vg5-go-V5y" secondAttribute="bottom" constant="70" id="wcT-Sl-xBR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Tm-Ld-vCx" secondAttribute="trailing" id="xKc-G2-C9n"/>
+                            <constraint firstItem="i02-sW-G8F" firstAttribute="centerX" secondItem="T29-oQ-SZ0" secondAttribute="centerX" id="xrR-vP-1C7">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="vg5-go-V5y" firstAttribute="leading" secondItem="i02-sW-G8F" secondAttribute="trailing" constant="37" id="yR3-Be-IWJ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="36"/>
+                            </constraint>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wcT-Sl-xBR"/>
+                                <exclude reference="Zgd-W0-Ele"/>
+                                <exclude reference="jxN-7b-8YH"/>
+                                <exclude reference="mSb-vV-AdL"/>
+                                <exclude reference="BYh-51-3PS"/>
+                                <exclude reference="lXP-NL-32M"/>
+                                <exclude reference="yR3-Be-IWJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="zyR-hq-TdS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="wcT-Sl-xBR"/>
+                                <exclude reference="xrR-vP-1C7"/>
+                                <exclude reference="1JB-80-GBv"/>
+                                <exclude reference="WAC-Gu-VUQ"/>
+                                <include reference="Zgd-W0-Ele"/>
+                                <include reference="jxN-7b-8YH"/>
+                                <include reference="mSb-vV-AdL"/>
+                                <include reference="BYh-51-3PS"/>
+                                <exclude reference="Tua-PR-LCN"/>
+                                <exclude reference="lUg-fU-w8V"/>
+                                <include reference="lXP-NL-32M"/>
+                                <include reference="yR3-Be-IWJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="C F Converter" id="eOa-m3-c0R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1044.7183098591549" y="108.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3jo-1l-kwO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="otg-gZ-jES" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="55x-cl-jXr">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1ts-Ka-oVy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlX-0O-5gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="day" width="375" height="667"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+        <image name="sun.min" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
