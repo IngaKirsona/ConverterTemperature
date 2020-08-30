@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otg-gZ-jES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,35 +12,48 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConverterTemperature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-Ld-vCx">
-                                <rect key="frame" x="0.0" y="-49" width="320" height="651"/>
+                                <rect key="frame" x="0.0" y="-38" width="1366" height="1076"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.max.fill" translatesAutoresizingMaskIntoConstraints="NO" id="3XG-JI-EWj">
-                                <rect key="frame" x="42" y="269" width="236" height="31"/>
+                                <rect key="frame" x="190" y="487" width="987" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O1O-uT-zLU"/>
+                                </constraints>
                                 <color key="minimumTrackTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="maximumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O1O-uT-zLU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="O1O-uT-zLU"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="iJn-sP-boc"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-go-V5y">
-                                <rect key="frame" x="24" y="119" width="280" height="32"/>
+                                <rect key="frame" x="519.5" y="132" width="327" height="32"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i02-sW-G8F">
-                                <rect key="frame" x="126" y="193" width="69" height="36"/>
+                                <rect key="frame" x="650" y="401" width="69" height="36"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T29-oQ-SZ0">
-                                <rect key="frame" x="127" y="359" width="67" height="35"/>
+                                <rect key="frame" x="651" y="587" width="67" height="35"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,8 +92,12 @@
                             <constraint firstItem="T29-oQ-SZ0" firstAttribute="centerX" secondItem="i02-sW-G8F" secondAttribute="centerX" id="Zgd-W0-Ele">
                                 <variation key="heightClass=compact-widthClass=compact" constant="1"/>
                             </constraint>
-                            <constraint firstItem="3XG-JI-EWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="cxm-md-Plh"/>
-                            <constraint firstItem="3XG-JI-EWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBt-UD-GI0"/>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="cxm-md-Plh">
+                                <variation key="heightClass=regular-widthClass=regular" constant="192"/>
+                            </constraint>
+                            <constraint firstItem="3XG-JI-EWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBt-UD-GI0">
+                                <variation key="heightClass=regular-widthClass=regular" constant="0.5"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9Tm-Ld-vCx" secondAttribute="top" constant="140" id="f6B-lr-wpJ"/>
                             <constraint firstItem="T29-oQ-SZ0" firstAttribute="top" secondItem="3XG-JI-EWj" secondAttribute="bottom" constant="50" id="jxN-7b-8YH">
                                 <variation key="heightClass=compact-widthClass=compact" constant="29"/>
@@ -165,18 +182,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="106.47321428571428"/>
+            <point key="canvasLocation" x="1038.1294964028777" y="106.03015075376885"/>
         </scene>
         <!--Appearence View Controller-->
         <scene sceneID="oHk-tc-pa2">
             <objects>
                 <viewController id="jq5-M5-sEx" customClass="AppearenceViewController" customModule="ConverterTemperature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WtQ-ZK-EmN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-zK-KDr">
-                                <rect key="frame" x="95" y="237.5" width="130" height="93.5"/>
+                                <rect key="frame" x="618" y="465.5" width="130" height="93.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAY-m1-jyj">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
@@ -215,11 +232,11 @@
             <objects>
                 <viewController id="pxC-Nh-gcu" customClass="InfoViewController" customModule="ConverterTemperature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPt-A3-02n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qf-FA-wy3">
-                                <rect key="frame" x="264" y="20" width="40" height="40"/>
+                                <rect key="frame" x="264" y="20" width="19.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="A8u-7b-dUn"/>
                                     <constraint firstAttribute="height" constant="40" id="hH1-fU-Igj"/>
@@ -230,13 +247,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bel-3b-pPj">
-                                <rect key="frame" x="60" y="507.5" width="200" height="20.5"/>
+                                <rect key="frame" x="60" y="943.5" width="179.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdy-rd-HH5">
-                                <rect key="frame" x="113" y="258.5" width="94" height="31.5"/>
+                                <rect key="frame" x="103" y="476.5" width="94" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -270,7 +287,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="otg-gZ-jES" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="55x-cl-jXr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
