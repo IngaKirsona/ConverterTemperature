@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otg-gZ-jES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,32 +12,35 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConverterTemperature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-Ld-vCx">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="646"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.max.fill" translatesAutoresizingMaskIntoConstraints="NO" id="3XG-JI-EWj">
-                                <rect key="frame" x="42" y="269" width="236" height="31"/>
+                                <rect key="frame" x="42" y="433" width="330" height="31"/>
                                 <color key="minimumTrackTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="maximumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="iJn-sP-boc"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-go-V5y">
-                                <rect key="frame" x="24" y="72" width="280" height="32"/>
+                                <rect key="frame" x="47.5" y="168" width="327" height="32"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i02-sW-G8F">
-                                <rect key="frame" x="126" y="193" width="69" height="36"/>
+                                <rect key="frame" x="173" y="357" width="69" height="36"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T29-oQ-SZ0">
-                                <rect key="frame" x="127" y="359" width="67" height="35"/>
+                                <rect key="frame" x="174" y="523" width="67" height="35"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,7 +81,7 @@
                             </constraint>
                             <constraint firstItem="3XG-JI-EWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="cxm-md-Plh"/>
                             <constraint firstItem="3XG-JI-EWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBt-UD-GI0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9Tm-Ld-vCx" secondAttribute="top" constant="88" id="f6B-lr-wpJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9Tm-Ld-vCx" secondAttribute="top" constant="140" id="f6B-lr-wpJ"/>
                             <constraint firstItem="T29-oQ-SZ0" firstAttribute="top" secondItem="3XG-JI-EWj" secondAttribute="bottom" constant="50" id="jxN-7b-8YH">
                                 <variation key="heightClass=compact-widthClass=compact" constant="29"/>
                             </constraint>
@@ -114,10 +117,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="wcT-Sl-xBR"/>
                                 <exclude reference="BYh-51-3PS"/>
                                 <exclude reference="lXP-NL-32M"/>
                                 <exclude reference="yR3-Be-IWJ"/>
+                                <exclude reference="wcT-Sl-xBR"/>
                                 <exclude reference="Zgd-W0-Ele"/>
                                 <exclude reference="jxN-7b-8YH"/>
                                 <exclude reference="mSb-vV-AdL"/>
@@ -125,13 +128,13 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="wcT-Sl-xBR"/>
                                 <include reference="BYh-51-3PS"/>
                                 <exclude reference="Tua-PR-LCN"/>
                                 <exclude reference="lUg-fU-w8V"/>
                                 <include reference="lXP-NL-32M"/>
                                 <include reference="yR3-Be-IWJ"/>
                                 <exclude reference="xrR-vP-1C7"/>
+                                <include reference="wcT-Sl-xBR"/>
                                 <exclude reference="1JB-80-GBv"/>
                                 <exclude reference="WAC-Gu-VUQ"/>
                                 <include reference="Zgd-W0-Ele"/>
@@ -140,19 +143,27 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="C F Converter" id="eOa-m3-c0R"/>
+                    <navigationItem key="navigationItem" title="C F Converter" id="eOa-m3-c0R">
+                        <barButtonItem key="leftBarButtonItem" title="info" id="HJl-Ql-eIk"/>
+                        <barButtonItem key="rightBarButtonItem" title="dark mode" id="GvR-1H-AAo"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="i02-sW-G8F" id="pty-Bg-123"/>
+                        <outlet property="fahrenheitLabel" destination="T29-oQ-SZ0" id="Hpf-ja-EV7"/>
+                        <outlet property="tempSlider" destination="3XG-JI-EWj" id="rmr-lW-cYX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.4929577464789" y="106.875"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="106.47321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3jo-1l-kwO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="otg-gZ-jES" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="55x-cl-jXr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="55x-cl-jXr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
